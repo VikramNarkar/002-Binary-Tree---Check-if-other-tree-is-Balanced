@@ -1,0 +1,13 @@
+Date: 18 November, 2013.
+
+
+A Binary Tree is BALANCED:
+1. if Tree is EMPTY
+OR
+2. Height of both subtrees differ by 0 or 1.
+
+
+
+Code taken from:
+
+http://stackoverflow.com/questions/742844/how-to-determine-if-binary-tree-is-balanced
