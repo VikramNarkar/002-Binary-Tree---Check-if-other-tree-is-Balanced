@@ -20,6 +20,28 @@ public class BinaryTreeRunner {
 		theTree.insert(87, 1.7);
 		theTree.insert(93, 1.5);
 		theTree.insert(97, 1.5);
+		
+		boolean balanced = theTree.isBalanced(theTree.getRoot());
+		
+		if (balanced)
+			System.out.println("The tree is balanced!!!");
+		else
+			System.out.println("The tree is not balanced.");
+		/* The above binary tree is not balanced. Hence, let us add 
+		 * few nodes to balance it */
+			
+		theTree.insert(6, 0.5);
+		theTree.insert(86, 1.4);
+		theTree.insert(66, 1.2);
+		theTree.insert(60, 1.1);
+		
+		balanced = theTree.isBalanced(theTree.getRoot());
+		
+		if (balanced)
+			System.out.println("The tree is balanced!!!");
+		else
+			System.out.println("The tree is not balanced.");
+		/* This is balanced binary tree. */
 
 	}
 

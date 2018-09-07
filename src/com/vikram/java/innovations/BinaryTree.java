@@ -226,5 +226,31 @@ public class BinaryTree {
 	      System.out.print(localRoot.getKey() + " ");
 	      }
 	   }
+	
+	
+	// ----------------------------------------------------------------
+	/**
+	 * Code for balanced is prepared from
+	 * For video: https://www.youtube.com/watch?v=nOcFiGl5Vy4&index=19&list=PLNmW52ef0uwsjnM06LweaYEZr-wjPKBnj
+	 * Code and explanation: https://www.byte-by-byte.com/balancedtree/
+	 * @return
+	 */
+	
+	public boolean isBalanced(Node n) {
+	    if (balancedHeight(n) > -1) return true;
+	    return false;
+	}
+	 
+	public int balancedHeight(Node n) {
+	    if (n == null) return 0;
+	    int h1 = balancedHeight(n.getRight());
+	    int h2 = balancedHeight(n.getLeft());
+	 
+	    if (h1 == -1 || h2 == -1) return -1;
+	    if (Math.abs(h1 - h2) > 1) return -1;
+	    if (h1 > h2) return h1 + 1;
+	    return h2 + 1;
+	}
+
 
 }
